@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSデモページ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ヘッダータイトル</h1>
+        <p>マテリアルデザイン風テンプレート</p>
+    </header>
+
+    <div class="main-layout">
+        <nav class="sidebar">
+            <h3>メニュー</h3>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">プロフィール</a></li>
+                <li><a href="#">メッセージ</a></li>
+                <li><a href="#">設定</a></li>
+            </ul>
+        </nav>
+
+        <main class="container">
+
+            <!-- Typography Section -->
+            <section class="card">
+                <h2>タイポグラフィ</h2>
+                <h1>h1: 見出し 1</h1>
+                <h2>h2: 見出し 2</h2>
+                <h3>h3: 見出し 3</h3>
+                <h4>h4: 見出し 4</h4>
+                <h5>h5: 見出し 5</h5>
+                <h6>h6: 見出し 6</h6>
+                <p>これは段落(p)です。テキストがどのように表示されるかを示します。詳細については、<a href="#">このリンク</a>をクリックしてください。</p>
+            </section>
+
+            <!-- Buttons Section -->
+            <section class="card">
+                <h2>ボタン</h2>
+                <p>様々な種類のボタンです。</p>
+                <button class="btn btn-primary">プライマリ</button>
+                <button class="btn btn-secondary">セカンダリ</button>
+                <button class="btn btn-text">テキスト</button>
+            </section>
+
+            <!-- Card Section -->
+            <section>
+                <h2>カード</h2>
+                <div class="card">
+                    <h3>カードタイトル</h3>
+                    <p>これはカードコンポーネントの例です。影と角丸が特徴で、情報をグループ化するのに適しています。</p>
+                    <a href="#" class="btn btn-primary">もっと見る</a>
+                </div>
+            </section>
+
+            <!-- Form Section -->
+            <section class="card">
+                <h2>フォーム</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name" class="form-label">お名前</label>
+                        <input type="text" id="name" class="form-control" placeholder="山田 太郎">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">メールアドレス</label>
+                        <input type="email" id="email" class="form-control" placeholder="name@example.com">
+                    </div>
+                     <div class="form-group">
+                        <label for="message" class="form-label">メッセージ</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="お問い合わせ内容"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">送信</button>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 デモサイト</p>
+    </footer>
+
+</body>
+</html>

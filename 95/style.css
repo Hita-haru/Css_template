@@ -1,0 +1,146 @@
+/* Windows 95風 CSS */
+
+body {
+    background-color: #008080; /* ティールブルー */
+    font-family: "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
+    color: #000;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+a {
+    color: #0000FF;
+}
+
+header {
+    background-color: #c0c0c0; /* グレー */
+    padding: 10px;
+    border: 2px solid #c0c0c0;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    border-left-color: #fff;
+    border-top-color: #fff;
+}
+
+header h1 {
+    background-color: #000080; /* ダークブルー */
+    color: #fff;
+    padding: 5px;
+    margin: 0;
+    font-size: 20px;
+}
+
+.main-layout {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #c0c0c0;
+    padding: 10px;
+    border: 2px solid #c0c0c0;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    margin: 10px;
+    width: 200px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar li a:hover {
+    background-color: #000080;
+    color: #fff;
+}
+
+.container {
+    flex: 1;
+    padding: 10px;
+}
+
+.card {
+    background-color: #c0c0c0;
+    border: 2px solid #c0c0c0;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #808080;
+    padding-bottom: 5px;
+}
+
+.btn {
+    border: 2px solid #c0c0c0;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    background-color: #c0c0c0;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:active {
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    border-left-color: #000;
+    border-top-color: #000;
+}
+
+.btn-primary {
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: calc(100% - 10px);
+    padding: 5px;
+    border: 2px inset #808080;
+    background-color: #fff;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+footer {
+    background-color: #c0c0c0;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #fff;
+}

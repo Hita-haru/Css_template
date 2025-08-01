@@ -1,0 +1,188 @@
+/* --- Base Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Noto+Sans+JP:wght@300;400&display=swap');
+
+:root {
+    --primary-color: #00ffff; /* Cyan */
+    --secondary-color: #ff00ff; /* Magenta */
+    --background-color: #0a0a14;
+    --surface-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --glow-color: rgba(0, 255, 255, 0.5);
+    --card-border-color: rgba(0, 255, 255, 0.2);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    text-shadow: 0 0 2px rgba(224, 224, 224, 0.1);
+    max-width: 1200px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color);
+    letter-spacing: 2px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px var(--glow-color);
+}
+
+/* --- Layout --- */
+.main-layout {
+    display: flex;
+    /* max-width and margin are now on body */
+    padding: 0; /* Padding is now on body */
+    gap: 2rem;
+}
+
+.sidebar {
+    flex: 0 0 200px;
+    background: var(--surface-color);
+    padding: 1.5rem;
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.container {
+    flex: 1;
+}
+
+/* --- Components --- */
+header, footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--surface-color);
+    border-bottom: 1px solid var(--primary-color);
+    border-radius: 8px; /* Match cards */
+    margin-bottom: 2rem; /* Spacing from main content */
+}
+
+header h1 {
+    margin: 0;
+}
+
+footer {
+    border-top: 1px solid var(--primary-color);
+    border-bottom: none;
+    margin-top: 2rem;
+    margin-bottom: 0; /* No spacing at the very bottom */
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.card {
+    background: var(--surface-color);
+    border: 1px solid var(--card-border-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(0, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 20px var(--glow-color), inset 0 0 5px rgba(0, 255, 255, 0.1);
+}
+
+.btn {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    text-shadow: 0 0 3px var(--glow-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 0 20px var(--glow-color);
+}
+
+.btn-secondary {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    text-shadow: 0 0 3px var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.btn-text {
+    border: none;
+}
+
+/* --- Forms --- */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    background: #080810;
+    border: 1px solid var(--card-border-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Fix padding issue */
+    border-radius: 4px; /* Slightly round input corners */
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--glow-color);
+}
